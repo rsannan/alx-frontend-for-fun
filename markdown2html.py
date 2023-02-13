@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Takes cmd arguments
 First argument is the name of the Markdown file
@@ -8,9 +7,9 @@ If the number of arguments is less than 2: print in STDERR Usage: ./markdown2htm
 If the Markdown file doesnt exist: print in STDER Missing <filename> and exit 1
 Otherwise, print nothing and exit 0
 """
+import sys
 
 if __name__ == "__main__":
-    import sys
 
     if len(sys.argv) < 3:
         sys.stderr.write('Usage: ./markdown2html.py README.md README.html')
