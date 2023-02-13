@@ -9,12 +9,11 @@ If the Markdown file doesnt exist: print in STDER Missing <filename> and exit 1
 Otherwise, print nothing and exit 0
 """
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import sys
 
     if len(sys.argv) < 3:
-        sys.stderr.write('Usage: ./markdown2html.py README.md README.html'
-                         )
+        sys.stderr.write('Usage: ./markdown2html.py README.md README.html')
         sys.exit(1)
 
     try:
