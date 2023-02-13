@@ -11,13 +11,13 @@ import sys
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        sys.stderr.write('Usage: ./markdown2html.py README.md README.html')
+        print('Usage: ./markdown2html.py README.md README.html')
         sys.exit(1)
 
     try:
         readme = open(sys.argv[1])
     except FileNotFoundError:
-        sys.stderr.write(f'Missing {sys.argv[1]}')
+        print(f'Missing {sys.argv[1]}')
         sys.exit(1)
 
     sys.exit(0)
