@@ -15,7 +15,16 @@ if __name__ == "__main__":
         sys.exit(1)
 
     try:
-        readme = open(sys.argv[1])
+        with open(sys.argv[1]) as f:
+            data = f.readlines()
+            for line in data:
+                if '#' in line:
+                    words = line.split()
+                    for word in words:
+                        if word == '#':
+                            sum += 1
+                    final_word = f"<h{sum}> {}"
+
     except FileNotFoundError:
         print(f'Missing {sys.argv[1]}', file=sys.stderr)
         sys.exit(1)
